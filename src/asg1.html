@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+          background-color: #a7c7e7; /* Light pastel blue */
+          color: #333; /* Adjust text color for readability */
+          font-family: Arial, sans-serif; /* Improve font readability */
+      }
+      canvas {
+          display: block; /* Removes bottom margin/gap */
+          margin: auto; /* Center canvas horizontally */
+          border: 1px solid #ccc; /* Add subtle border for visibility */
+      }
+      .slider {
+          width: 80%; /* Full width can be too large sometimes */
+          display: block; /* Makes sliders take a full line */
+          margin: 10px auto; /* Centers the slider and adds vertical space */
+      }
+      button {
+          margin: 5px; /* Adds space around buttons */
+          padding: 10px; /* Larger click area and more comfortable */
+          background-color: #f8f8f8; /* Light background for buttons */
+          border: 1px solid #ddd; /* Subtle border */
+          cursor: pointer; /* Cursor indicates clickable */
+      }
+      button:hover {
+          background-color: #e8e8e8; /* Slightly darker on hover */
+      }
+  </style>
+    <meta charset="utf-8" />
+    <title>Assignment 1</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+    <p>
+    <!-- <button type="button" id="green">Green</button>
+    <button type="button" id="red">Red</button> -->
+    <button type="button" id="clear">Clear Canvas</button>
+    <button type="button" id="4d">4D Cube Example</button>
+
+    <p>
+    Shapes <button type="button" id="pointButton">Squares</button>
+    <button type="triangle" id="triButton">Triangles</button>
+    <button type="circle" id="circleButton">Circles</button>
+
+    <p>
+    Red <input type="range" min="0" max="100" value="100" class="slider" id="redSlide">
+
+    <p>
+    Green <input type="range" min="0" max="100" value="0" class="slider" id="greenSlide">
+
+    <p>
+    Blue <input type="range" min="0" max="100" value="0" class="slider" id="blueSlide">
+
+    <p>
+    Size <input type="range" min="5" max="40" value="0" class="slider" id="sizeSlide">
+    (Circles) Segment Count <input type="range" min="5" max="40" value="0" class="slider" id="segmentsSlide">
+    
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Point.js"></script>
+    <script src="Circle.js"></script>
+    <script src="asg1.js"></script>
+  </body>
+</html>
